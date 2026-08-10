@@ -1,0 +1,5 @@
+# Agent Plugins 1.0 — LuckyStar MCP server dependencies
+# NOTE: LuckyStarMcp.py uses `mcp.server.fastmcp`, the FastMCP API bundled in
+# the official SDK before 2.0. Pin to the 1.x line (or `pip install fastmcp`).
+mcp>=1.2.0,<2.0
+pydantic>=2.0.0

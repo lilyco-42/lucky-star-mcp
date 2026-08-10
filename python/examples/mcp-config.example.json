@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "luckystar": {
+      "type": "http",
+      "url": "http://127.0.0.1:14447/mcp",
+      "enabled": true
+    }
+  }
+}
