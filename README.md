@@ -1,4 +1,4 @@
-# Agent Plugins 1.0
+# lucky-star-mcp
 
 AI-agent plugins for the **LuckyStar / LS_KTool** Android memory-debugging stack
 (from [lsnbm/Linux-android-arm64](https://github.com/lsnbm/Linux-android-arm64)).
@@ -16,7 +16,7 @@ through the standard **Model Context Protocol (MCP)**.
 ## What's inside
 
 ```
-Agent-Plugins-1.0/
+lucky-star-mcp/
 ├── python/
 │   ├── LuckyStarMcp.py      # FastMCP server  → exposes the Android bridge as MCP tools
 │   ├── http_bridge.py       # NativeHttpBridge → talks to the Android HTTP server (port 9494)
@@ -111,7 +111,7 @@ Or, to have the client launch the server itself (stdio mode):
   "mcpServers": {
     "luckystar": {
       "command": "python",
-      "args": ["/path/to/Agent-Plugins-1.0/python/LuckyStarMcp.py"]
+      "args": ["/path/to/lucky-star-mcp/python/LuckyStarMcp.py"]
     }
   }
 }
