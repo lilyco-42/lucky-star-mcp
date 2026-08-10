@@ -51,10 +51,26 @@ A desktop GUI client (Fyne) for the same bridge, with its own MCP server in
 
 1. **Android device** running `LS_KTool` in HTTP-server mode (port `9494`),
    reachable over the LAN (or via a Cloudflare tunnel URL).
-2. **Python 3.10+** for the Python MCP server.
+2. **Python 3.12+** for the Python MCP server.
 
 > The MCP server starts even when the device is offline — each tool call will
 > then return a bridge-connection error instead.
+
+---
+
+## One-shot install for local agents
+
+`./install.sh` sets up a Python venv, registers the MCP server with your local
+agents (Claude Code, Claude Desktop, Cursor), and starts it:
+
+```bash
+./install.sh            # venv + deps + register agents + start server
+./install.sh status     # check server / adb forward state
+./install.sh stop       # stop the server
+```
+
+It also runs `adb forward tcp:9494 tcp:9494` so the server reaches the device
+through the adb connection (`--android-host 127.0.0.1`).
 
 ---
 
